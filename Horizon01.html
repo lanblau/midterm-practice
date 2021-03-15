@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizon</title>
+    <link rel="stylesheet" href="./animation.css">
+    <!-- //CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Source Code Pro', monospace, 'Segoe UI';
+            font-weight: 200;
+            font-size: 20px;
+            font-weight: 200;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        div {
+            display: block;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .fixed {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            transition: 0.5s;
+            z-index: 99;
+        }
+
+        .navbar {
+            box-shadow: rgb(25 28 31 / 4%) 0px 8px 16px, rgb(25 28 31 / 4%) 0px -1px 0px;
+            background-color: rgba(255, 255, 255, 0.335);
+            backdrop-filter: blur(1px);
+        }
+
+        .navbar-nav {
+            text-align: center;
+            font-weight: 380;
+        }
+
+        .navbar-light .navbar-toggler {
+            color: transparent;
+            border-color: transparent;
+        }
+
+        .navbar-light .navbar-toggler-icon {
+            background: url(./img/menuicon.svg) no-repeat;
+        }
+
+        .navbar-toggler-icon {
+            width: 5rem;
+            height: 3rem;
+        }
+
+        .navbar-light .navbar-brand {
+            color: white;
+            text-shadow: 0px 1px 2px #57647E;
+            font-size: 2rem;
+            font-weight: 350;
+        }
+
+        .title {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .circle {
+            margin: 0px 10px 50px;
+        }
+
+        @media (min-width: 200px) {
+            h1 {
+                font-size: 4rem;
+            }
+
+            .wrap p {
+                font-size: 14px;
+            }
+
+            .maintitle {
+                text-align: center;
+            }
+
+            h2::before {
+                content: '';
+                width: calc(100% + 130px);
+                height: 1px;
+                background: #74CEEB;
+                position: absolute;
+                bottom: 15%;
+                left: 0;
+                z-index: -1;
+            }
+
+            h2 {
+                font-family: 'Source Code Pro', monospace;
+                font-weight: 200;
+                font-size: 1.8rem;
+                color: #929292;
+                margin: 90px 0px 50px 10%;
+                position: relative;
+            }
+
+            .box {
+                margin: 0;
+            }
+
+            .mapImage {
+                width: 350px;
+                min-width: 300px;
+            }
+
+            .pic {
+                width: 250px;
+                height: 100%;
+            }
+
+            h3 {
+                font-size: 1rem;
+            }
+
+            .color {
+                width: 45px;
+                height: 25px;
+                border-radius: 152px 74px 145px 129px;
+            }
+
+            .sec {
+                padding: 20px;
+                margin-left: 20%;
+            }
+
+            .busroute {
+                max-width: 300px;
+                height: 250px;
+                margin-top: 100px;
+            }
+
+            .busimg {
+                width: 30px;
+            }
+
+            .timetablePic {
+                flex-direction: column;
+                margin: 0;
+            }
+
+            .contactinfo {
+                flex-direction: column;
+                margin: 0;
+            }
+
+            .address {
+                margin: 0 auto;
+                width: 350px;
+            }
+        }
+
+        @media (min-width: 500px) {
+            h1 {
+                font-size: 8rem;
+            }
+
+            .wrap p {
+                font-size: 20px;
+            }
+
+            h2::before {
+                content: '';
+                width: calc(100% + 150px);
+                height: 1px;
+                background: #74CEEB;
+                position: absolute;
+                bottom: 20%;
+                left: 0;
+                z-index: -1;
+            }
+
+            h2 {
+                font-family: 'Source Code Pro', monospace;
+                font-weight: 200;
+                font-size: 3rem;
+                color: #929292;
+                margin: 90px 0px 50px 13%;
+                position: relative;
+            }
+
+            .box {
+                margin: 10px;
+            }
+
+            .mapImage {
+                width: 700px;
+            }
+
+            .pic {
+                width: 300px;
+                height: 100%;
+            }
+
+            h3 {
+                font-size: 2rem;
+            }
+
+            .color {
+                width: 60px;
+                height: 35px;
+            }
+
+            .sec {
+                padding: 0px;
+                margin-left: 0;
+            }
+
+            .busroute {
+                min-width: 500px;
+            }
+
+            .busimg {
+                width: 80px;
+            }
+        }
+
+        @media (min-width: 770px) {
+            .mapImage {
+                width: 1200px;
+            }
+
+            .pic {
+                width: 511px;
+                height: 100%;
+            }
+
+            .color {
+                width: 85px;
+                height: 50px;
+            }
+
+            .sec {
+                padding: 0px;
+                margin-left: 0;
+            }
+
+            .busroute {
+                max-width: 1000px;
+            }
+
+            .busimg {
+                width: 130px;
+                animation-name: oxxo;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+            }
+
+            .timetablePic {
+                flex-direction: row;
+                margin: 10px 15%;
+            }
+
+            .contactinfo {
+                flex-direction: row;
+                margin: 0 10%;
+            }
+
+            .address {
+                margin: 0 10%;
+                width: 100%;
+            }
+
+        }
+
+        @media (min-width: 1367px) {
+            .busroute {
+                max-width: 1200px;
+            }
+
+            .busimg {
+                width: 150px;
+                animation-name: oxxo2;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        h1 {
+            font-family: 'Source Code Pro', monospace;
+            font-weight: 200;
+            color: rgb(255, 255, 255);
+        }
+
+        .wrap p {
+            font-family: 'Source Code Pro', monospace;
+            text-shadow: 0px 2px 3px #57647E;
+            color: rgb(255, 255, 255);
+            font-weight: 350;
+        }
+
+        .maintitle {
+            position: absolute;
+            top: 40%;
+            right: 0;
+            z-index: 10;
+        }
+
+        .wrap {
+            max-width: 100%;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        /* 全部圖位置 */
+        .img-wrap {
+            width: 600vw;
+            height: 100vh;
+            position: absolute;
+            transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        /* 用li寫死父層寬 就可以讓後面圖不顯示出來 .img-wrap img{object-fit:改適合的}*/
+        .img-wrap li {
+            width: 100vw;
+        }
+
+        /* 每張圖顯示方式 */
+        .img-wrap img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        /* 全部點的位置 */
+        .slider-dots {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            list-style-type: none;
+            display: flex;
+            /* justify-content: center; */
+            /* 置中於父層100%寬 */
+            /* width: 100%; */
+            /* 設寬跟父層一樣大 */
+        }
+
+        /* 每個點的大小樣式 */
+        .slider-dots li {
+            width: 25px;
+            height: 2.5px;
+            margin: 0 5px;
+            background-color: #74CEEB;
+        }
+
+        #table1 {
+            border: none;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        th {
+            border: none;
+            border-bottom: 1px solid #74CEEB;
+            color: #707070;
+            font-family: 'Source Code Pro', monospace;
+            font-weight: 200;
+            font-size: 2rem;
+            text-align: center;
+            white-space: nowrap;
+            text-indent: 10px;
+        }
+
+        td {
+            border: none;
+            /* white-space: nowrap; */
+            color: #7E5757;
+            text-align: left;
+            padding: 15px;
+            font-family: 'Segoe UI';
+        }
+
+        td.news {
+            border-left: 1px solid#707070;
+            min-width: 750px;
+        }
+
+        td.arrive {
+            border-left: 1px solid#707070;
+        }
+
+        td.departure,
+        td.arrive {
+            text-align: center;
+            padding: 6px;
+        }
+
+        #table2 {
+            margin: 0 10px;
+            border: none;
+            border-collapse: collapse;
+        }
+
+        @media (min-width: 100px) {
+            th {
+                font-size: 1.5rem;
+            }
+
+            .depAritime {
+                font-size: 1rem;
+            }
+
+            td.news {
+                min-width: 180px;
+            }
+
+            td {
+                font-size: 14px;
+            }
+
+            #table2 {
+                margin: 0 15%;
+            }
+        }
+
+        @media (min-width: 500px) {
+            td.news {
+                min-width: 450px;
+            }
+
+            td {
+                font-size: 16px;
+            }
+
+            #table2 {
+                margin: 0;
+            }
+
+        }
+
+        @media (min-width: 770px) {
+            td.news {
+                min-width: 770px;
+            }
+
+            td {
+                font-size: 20px;
+            }
+
+        }
+
+        .clubContent {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+            margin: 1px 80px 50px;
+        }
+
+        .clubfirst {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .clubsecond {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 370px;
+            height: 250px;
+            border-radius: 152px 74px 145px 129px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .clubGlass {
+            display: block;
+            width: 300px;
+            height: 200px;
+            border-radius: 152px 74px 145px 129px;
+            background-color: rgba(255, 255, 255, 0.335);
+            border: 1.5px solid rgb(255, 255, 255);
+            backdrop-filter: blur(1px);
+            z-index: -1;
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            position: relative;
+        }
+
+        .clubGlass:hover {
+            /* display: none; */
+            background-color: transparent;
+
+        }
+
+        .box p {
+            white-space: nowrap;
+            display: inline-block;
+            font-family: 'Source Code Pro', monospace;
+            font-weight: 200;
+            font-size: 2rem;
+            color: #ffffff;
+            text-shadow: 0px 2px 3px #57647E;
+            /* text-align: center; */
+            /* text-align:justify; */
+            /* line-height: 1.6; */
+            border: 3px;
+            position: absolute;
+            top: 40%;
+            /* left: 2%; */
+            /* margin: 0 10px 0 20px; */
+            /* padding: 0 5%; */
+            z-index: 1;
+        }
+
+        .club1 {
+            background: url('./img/club/basketball.jpg') no-repeat;
+            background-size: cover;
+            background-position: 10% 40%;
+            z-index: -2;
+        }
+
+        .club2 {
+            background: url('./img/club/tennis.png') no-repeat;
+            background-size: cover;
+            z-index: -2;
+        }
+
+        .club3 {
+            background: url('./img/club/badminton-racket-shuttlecocks.jpg') no-repeat;
+            background-size: cover;
+            z-index: -2;
+        }
+
+        .club4 {
+            background: url('./img/club/elder.png') no-repeat;
+            background-size: cover;
+            background-position: 10% 45%;
+            z-index: -2;
+        }
+
+        .club5 {
+            background: url('./img/club/hiking.jpg') no-repeat;
+            background-size: cover;
+            z-index: -2;
+        }
+
+        .map {
+            margin: 5% auto;
+        }
+
+        .mapImage {
+            display: block;
+            height: 100%;
+            margin: 5% auto 5px;
+        }
+
+        .legend {
+            display: flex;
+            flex-direction: column;
+            margin: 5% 10% 0 20%;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+
+        .word p {
+            color: #7E5757;
+            text-indent: 10px;
+            white-space: nowrap;
+        }
+
+        h3 {
+            color: #7E5757;
+            font-weight: 200;
+            font-size: 2rem;
+        }
+
+        .sec {
+            width: 100%;
+            display: none;
+        }
+
+        .secall {
+            width: 40%;
+        }
+
+        .pic {
+            object-fit: contain;
+            border-radius: 152px 74px 145px 129px;
+            margin-top: 20px;
+        }
+
+        .move {
+            margin-left: 20%;
+        }
+
+        .sec:target {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sectionsec {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .color {
+            border-radius: 152px 74px 145px 129px;
+        }
+
+        .color01 {
+            background-color: #FCA5B0;
+        }
+
+        .color02 {
+            background-color: #F0E8FF;
+        }
+
+        .color03 {
+            background-color: #FFE8E8;
+        }
+
+        .color04 {
+            background-color: #C7FEC7;
+        }
+
+        .color05 {
+            background-color: #B0E1D5;
+        }
+
+        .color06 {
+            background-color: #F8F8BA;
+        }
+
+        .color07 {
+            background-color: #F2C9B4;
+        }
+
+        .color08 {
+            background-color: #C9FBFF;
+        }
+
+        .color09 {
+            background-color: #C5C5C5;
+        }
+
+        .busway {
+            position: relative;
+        }
+
+        .busroute {
+            margin: 10px auto 0;
+            padding-top: 0;
+            display: block;
+        }
+
+        .busimg {
+            position: absolute;
+            top: 5%;
+            left: 18%;
+        }
+
+        .timetablePic {
+            display: flex;
+        }
+
+        .streetimg {
+            width: 370px;
+            height: 250px;
+            border-radius: 152px 74px 145px 129px;
+        }
+
+        .flower {
+            width: 330px;
+            height: 210px;
+            margin: 100px 20px 20px;
+        }
+
+        .bgattachment {
+            width: 100%;
+            height: 350px;
+            background-attachment: fixed;
+            object-fit: cover;
+            margin: 100px 0;
+        }
+
+        .contactword {
+            margin: 10px 50px;
+        }
+
+        h4 {
+            color: #707070;
+            font-family: 'Source Code Pro', monospace;
+            font-weight: 200;
+        }
+
+        .contactp {
+            color: #7E5757;
+            font-family: 'Segoe UI';
+        }
+
+        .address {
+            border-radius: 50px;
+            filter: hue-rotate(340deg);
+        }
+
+        .contactinfo {
+            display: flex;
+        }
+
+        .footer {
+            background-color: #929292;
+            margin-top: 50px;
+            margin-bottom: 0;
+            height: 100%;
+        }
+
+        .smallnav {
+            color: #ffffff;
+            margin: 0 auto;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .copyright {
+            color: #D6D6D6;
+            margin-bottom: 0;
+        }
+
+        /* * {
+            outline: 1px solid red;
+        } */
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light  pt-2 ">
+        <a class="navbar-brand ml-5 mt-1 mr-5" href="./Horizon.html">
+            <p>Horizon</p>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span></button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ml-auto">
+                <li class="nav-item  mr-4"><a class="nav-link " href="#inf" id="navbarDropdown">Information </a>
+                </li>
+                <li class="nav-item  mr-4"><a class="nav-link " href="#clu">Club</a>
+                </li>
+                <li class="nav-item  mr-4"><a class="nav-link " href="#bus">Bus</a>
+                </li>
+                <li class="nav-item  mr-4"><a class="nav-link " href="#map">Map</a>
+                </li>
+                <li class="nav-item mr-4"><a class="nav-link " href="#con">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="wrap" id="top">
+        <div class="maintitle mr-2 pr-2 ml-2">
+            <h1 class="py-0 my-0 ">Horizon</h1>
+            <p class="py-0 my-0 pl-2">A Tranquil Community at the End of the Horizon</p>
+        </div>
+        <ul class="list-unstyled d-flex img-wrap">
+            <li><img src="./img/HEADER/1.png" alt=""></li>
+            <li><img src="./img/HEADER/2.png" alt=""></li>
+            <li><img src="./img/HEADER/3.png" alt=""></li>
+            <li><img src="./img/HEADER/4.png" alt=""></li>
+            <li><img src="./img/HEADER/5.png" alt=""></li>
+            <li><img src="./img/HEADER/6.png" alt=""></li>
+            <!-- <li><img src="./img/HEADER/1.png" alt=""></li> -->
+        </ul>
+        <ul class="slider-dots">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="information my-2 py-2" id="inf" data-aos="fade-down">
+        <div class="title" id="fir">
+            <h2>Information</h2>
+            <div class="circle">
+                <img src="./img/circle.svg" alt="">
+            </div>
+        </div>
+        <div>
+            <table id="table1" width="200" border="1" summary="表名">
+                <tbody>
+                    <tr>
+                        <th scope="col">Time</th>
+                        <th scope="col">News</th>
+                    </tr>
+                    <tr>
+                        <td class="time">2021.03.15</td>
+                        <td class="news">注意!!極光三街14巷路口的巨樹跌倒了，須至隔日才能移除，請各位住戶注意並繞道 </td>
+                    </tr>
+                    <tr>
+                        <td class="time">2021.03.05</td>
+                        <td class="news">注意!!常清西街的樹木太過高大，03月14日將會修剪，請各位住戶注意並繞道 </td>
+                    </tr>
+                    <tr>
+                        <td class="time">2021.03.01</td>
+                        <td class="news">3月到了，請住戶們記得繳管理費</td>
+                    </tr>
+                    <tr>
+                        <td class="time">2021.02.25</td>
+                        <td class="news">請各位住戶丟垃圾時，記得做好垃圾分類，做好環保人人有責</td>
+                    </tr>
+                    <tr>
+                        <td class="time">2020.03.10</td>
+                        <td class="news">因應新型冠狀肺炎，請各位住戶常洗手消毒，並定期量體溫，有症狀請儘速就醫</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="club mt-5" id="clu" data-aos="fade-down">
+        <div class="title">
+            <h2>Club</h2>
+            <div class="circle">
+                <img src="./img/circle.svg" alt="">
+            </div>
+        </div>
+
+        <div class="clubContent">
+            <div class="clubfirst">
+                <div class="box club1">
+                    <div class="clubGlass">
+                        <p>basketball club</p>
+                    </div>
+
+                </div>
+                <div class="box club2">
+                    <div class="clubGlass">
+                        <p>tennis club</p>
+                    </div>
+                </div>
+                <div class="box club3">
+                    <div class="clubGlass">
+                        <p>badminton club</p>
+                    </div>
+                </div>
+            </div>
+            <div class="clubsecond">
+                <div class="box club4">
+                    <div class="clubGlass">
+                        <p>elder club</p>
+                    </div>
+                </div>
+                <div class="box club5">
+                    <div class="clubGlass">
+                        <p>hiking club</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="map" id="map" data-aos="fade-down">
+        <div class="title">
+            <h2>Map</h2>
+            <div class="circle">
+                <img src="./img/circle.svg" alt="">
+            </div>
+        </div>
+        <div class="mapall" data-aos="zoom-in">
+            <div>
+                <img class="mapImage" src="./img/map.svg" alt="">
+            </div>
+        </div>
+        <div class=" sectionsec">
+            <div class="legend">
+                <a href="#Service center">
+                    <div class="item Service">
+                        <div class="color color01"></div>
+                        <div class="word">
+                            <p>Service center</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#School">
+                    <div class="item School">
+                        <div class="color color02">
+                        </div>
+                        <div class="word">
+                            <p>School</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#Housing">
+                    <div class="item Housing">
+                        <div class="color color03">
+                        </div>
+                        <div class="word">
+                            <p>Housing</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#Park">
+                    <div class="item Park">
+                        <div class="color color04">
+                        </div>
+                        <div class="word">
+                            <p>Park</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#Forest">
+                    <div class="item Forest">
+                        <div class="color color05">
+                        </div>
+                        <div class="word">
+                            <p>Forest</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#TennisCourt">
+                    <div class="item TennisCourt">
+                        <div class="color color06">
+                        </div>
+                        <div class="word">
+                            <p>Tennis court</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#BasketballCourt">
+                    <div class="item BasketballCourt">
+                        <div class="color color07">
+                        </div>
+                        <div class="word">
+                            <p>Basketball court</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#Pond">
+                    <div class="item Pond">
+                        <div class="color color08">
+                        </div>
+                        <div class="word">
+                            <p>Pond</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#Parkinglot">
+                    <div class="item Parkinglot">
+                        <div class="color color09">
+                        </div>
+                        <div class="word">
+                            <p>Parking lot</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="secall">
+                <div class="sec" id="Service center">
+                    <h3>Service center</h3>
+                    <img class="pic" src="./img/mapimg/service center01.png" />
+                    <img class="pic move" src="./img/mapimg/service center02.png" />
+                </div>
+
+                <div class="sec" id="School">
+                    <h3>School</h3>
+                    <img class="pic" src="./img/mapimg/school01.png" />
+                    <img class="pic move" src="./img/mapimg/school02.png" />
+                </div>
+                <div class="sec" id="Housing">
+                    <h3>Housing</h3>
+                    <img class="pic" src="./img/mapimg/housing01.png" />
+                    <img class="pic move" src="./img/mapimg/housing02.png" />
+                </div>
+                <div class="sec" id="Park">
+                    <h3>Park</h3>
+                    <img class="pic" src="./img/mapimg/park1.png" />
+                    <img class="pic move" src="./img/mapimg/park2.png" />
+                </div>
+                <div class="sec" id="Forest">
+                    <h3>Forest</h3>
+                    <img class="pic" src="./img/mapimg/forest01.png" />
+                    <img class="pic move" src="./img/mapimg/forest02.png" />
+                </div>
+                <div class="sec" id="TennisCourt">
+                    <h3>Tennis court</h3>
+                    <img class="pic" src="./img/mapimg/tennis court01.png" />
+                    <img class="pic move" src="./img/mapimg/tennis court02.png" />
+                </div>
+                <div class="sec" id="BasketballCourt">
+                    <h3>Basketball court</h3>
+                    <img class="pic" src="./img/mapimg/basketball court.png" />
+                    <img class="pic move" src="./img/mapimg/basketball court02.png" />
+                </div>
+                <div class="sec" id="Pond">
+                    <h3>Pond</h3>
+                    <img class="pic" src="./img/mapimg/pond01.png" />
+                    <img class="pic move" src="./img/mapimg/pond02.png" />
+                </div>
+                <div class="sec" id="Parkinglot">
+                    <h3>Parking lot</h3>
+                    <img class="pic" src="./img/mapimg/parking lot01.png" />
+                    <img class="pic move" src="./img/mapimg/parking lot02.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bus" id="bus" data-aos="fade-down">
+        <div class="title">
+            <h2>Bus</h2>
+            <div class="circle">
+                <img src="./img/circle.svg" alt="">
+            </div>
+        </div>
+        <div class="busway">
+            <img class="busroute" src="./img/busroute.svg" alt="">
+
+            <img class="busimg" src="./img/busimg.svg" alt="">
+        </div>
+
+        <div class="timetablePic">
+            <table id="table2" width="200" border="1" summary="表名">
+                <tbody>
+                    <tr>
+                        <th class="depAritime" scope="col">起站出發時間</th>
+                        <th class="depAritime" scope="col">終點站抵達時間</th>
+                    </tr>
+                    <tr>
+                        <td class="departure">7:10
+                        </td>
+                        <td class="arrive">7:25 </td>
+                    </tr>
+                    <tr>
+                        <td class="departure">8:30</td>
+                        </td>
+                        <td class="arrive">8:45
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="departure">10:20</td>
+                        <td class="arrive">10:35</td>
+                    </tr>
+                    <tr>
+                        <td class="departure">12:15</td>
+                        <td class="arrive">12:30</td>
+                    </tr>
+                    <tr>
+                        <td class="departure">15:30 </td>
+                        <td class="arrive">15:45</td>
+                    </tr>
+                    <tr>
+                        <td class="departure">17:00
+                        </td>
+                        <td class="arrive">17:15
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="departure">18:00
+
+                        </td>
+                        <td class="arrive">18:15
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <img class="streetimg flower" data-aos="zoom-in" src="./img/bus/street01.png" alt="">
+            <img class="streetimg" data-aos="zoom-in" src="./img/bus/housing05.png" alt="">
+        </div>
+    </div>
+    <img class="bgattachment" src="./img/bg/flower+car02.png" alt="">
+    <div class="contact" id="con" data-aos="fade-down" data-aos-duration="2000">
+        <div class="title">
+            <h2>Contact</h2>
+            <div class="circle">
+                <img src="./img/circle.svg" alt="">
+            </div>
+        </div>
+
+        <div class="contactinfo">
+            <div class="contactword">
+                <h4>Horizon社區</h4>
+                <p class="contactp">
+                    地址:宇宙市銀河區太陽里地球路一段<br>
+                    電話:02-2233-5558 <br>
+                    Email:horizoncommunity@gmail.com <br>
+                    服務中心服務時間: <br>
+                    週一至週五 08:00~20:00 <br>
+                    週六日、國定假日 9:00-18:00
+                </p>
+            </div>
+            <iframe class="address"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14473.847533780812!2d121.17545335219458!3d24.91633052735535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34682357617b94a7%3A0x432cb7764c946d34!2zMzI25qGD5ZyS5biC5qWK5qKF5Y2A5rC45bmz6YeM!5e0!3m2!1szh-TW!2stw!4v1615300015605!5m2!1szh-TW!2stw"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="smallnav">
+            <p><a href="#top">Top</a></p>
+            <p><a href="#inf">Information</a></p>
+            <p><a href="#clu">Club</a></p>
+            <p><a href="#bus">Bus</a></p>
+            <p><a href="#map">Map</a></p>
+            <p> <a href="#con"> Contact</a></p>
+            <p class="copyright">©2021 Horizon</p>
+        </div>
+
+    </div>
+
+    <!-- //JS  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- Optional JavaScript  -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(function () {
+            AOS.init({
+                offset: 200,
+                easing: 'ease-in-sine',
+                duration: 1200,
+            });
+        })
+
+        let lastScroll = 0
+        $(window).scroll(function () {
+            let scrollNow = $(this).scrollTop();
+            if (lastScroll < scrollNow) {
+                // nav fixed 
+                $('nav').removeClass('fixed');
+            }
+            else {
+                // nav unfixed             
+                $('nav').addClass('fixed');
+            }
+            lastScroll = scrollNow
+        })
+
+        let page = 0;
+        $('.slider-dots li').hover(
+            function () {
+                page = $(this).index();
+                $(this).css('background', '#fff').siblings().css('background', '#74CEEB');
+
+                $('.img-wrap').css('left', $(this).index() * -100 + 'vw');
+            })
+        setInterval(() => {
+            page = page + 1;
+
+            if (page >= 6) { page = 0; }
+
+            $('.img-wrap').css('left', page * -100 + 'vw');
+
+            $('.slider-dots li').eq(page).css('background', '#fff').siblings().css('background', ' #74CEEB');
+        }, 3000);
+
+        $('.mapImage').click(function () {
+            $(this).css({ width: '+=100', height: '+=200' });
+        })
+
+        $('.box p').click(function () {
+            $('.clubGlass').css(' background-color', ' transparent');
+        })
+
+    </script>
+
+</body>
+
+</html>

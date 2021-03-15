@@ -1,0 +1,67 @@
+  <svg  xmlns="http://www.w3.org/2000/svg" width="1328.061" height="362.599"
+                    viewBox="0 0 1328.061 362.599">
+                    <g id="busway" transform="translate(-321.813 -194.666)">
+                        <path id="Path_139" data-name="Path 139"
+                            d="M0-23.871S36.887,54.358,135.218,51.315s141.755-164.408,230.6-152.5S403.745,60.185,484.651,63.228s177.2-98.019,232.294-87.1,65.812,135.76,125.081,142.691c84.309,9.859,53.662-91.358,182.659-123.1S1223.226-93.62,1223.226-93.62"
+                            transform="translate(373.051 380.403)" fill="none" stroke="#74ceeb" stroke-width="1" />
+                        <g id="spot" transform="translate(353.313 266.762)">
+                            <ellipse id="Ellipse_3" data-name="Ellipse 3" cx="20.319" cy="19.798" rx="20.319"
+                                ry="19.798" transform="translate(1222.275 0)" fill="#d6d6d6" />
+                            <circle id="Ellipse_4" data-name="Ellipse 4" cx="19.798" cy="19.798" r="19.798"
+                                transform="translate(1013.874 87.529)" fill="#c9fbff" />
+                            <circle id="Ellipse_5" data-name="Ellipse 5" cx="19.798" cy="19.798" r="19.798"
+                                transform="translate(851.32 213.612)" fill="#f2c9b4" />
+                            <circle id="Ellipse_6" data-name="Ellipse 6" cx="19.798" cy="19.798" r="19.798"
+                                transform="translate(715.859 66.688)" fill="#b0e1d5" />
+                            <ellipse id="Ellipse_7" data-name="Ellipse 7" cx="20.319" cy="19.798" rx="20.319"
+                                ry="19.798" transform="translate(478.282 154.217)" fill="#c7fec7" />
+                            <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="20.319" cy="19.798" rx="20.319"
+                                ry="19.798" transform="translate(362.619 0)" fill="#ffe8e8" />
+                            <ellipse id="Ellipse_9" data-name="Ellipse 9" cx="20.319" cy="19.798" rx="20.319"
+                                ry="19.798" transform="translate(126.083 146.923)" fill="#f0e8ff" />
+                            <circle id="Ellipse_10" data-name="Ellipse 10" cx="19.798" cy="19.798" r="19.798"
+                                transform="translate(0 75.025)" fill="#fca5b0" />
+                        </g>
+                        <text id="起站_全家站" data-name="起站
+            全家站" transform="translate(321.813 221.666)" fill="#7e5757" font-size="23"
+                            font-family="NotoSansTC-Light, Noto Sans TC" font-weight="300">
+                            <tspan x="0" y="0">起站</tspan>
+                            <tspan x="0" y="29">全家站</tspan>
+                        </text>
+                        <text id="常清五街_二民路二段路口" data-name="常清五街/二民路二段路口" transform="translate(392.91 476.282)"
+                            fill="#7e5757" font-size="23" font-family="NotoSansTC-Light, Noto Sans TC"
+                            font-weight="300">
+                            <tspan x="0" y="0">常清五街/二民路二段路口</tspan>
+                        </text>
+                        <text id="常清東街_二民路二段路口" data-name="常清東街/二民路二段路口" transform="translate(614.857 250.166)"
+                            fill="#7e5757" font-size="23" font-family="NotoSansTC-Light, Noto Sans TC"
+                            font-weight="300">
+                            <tspan x="0" y="0">常清東街/二民路二段路口</tspan>
+                        </text>
+                        <text id="湖濱公園" transform="translate(805.545 486.702)" fill="#7e5757" font-size="23"
+                            font-family="NotoSansTC-Light, Noto Sans TC" font-weight="300">
+                            <tspan x="0" y="0">湖濱公園</tspan>
+                        </text>
+                        <text id="極光二街_二民路路口_" data-name="極光二街/二民路路口 " transform="translate(993.106 310.603)"
+                            fill="#7e5757" font-size="23" font-family="NotoSansTC-Light, Noto Sans TC"
+                            font-weight="300">
+                            <tspan x="0" y="0">極光二街/二民路路口 </tspan>
+                        </text>
+                        <text id="極光三街_二民路路口_" data-name="極光三街/二民路路口 " transform="translate(1115.021 550.265)"
+                            fill="#7e5757" font-size="23" font-family="NotoSansTC-Light, Noto Sans TC"
+                            font-weight="300">
+                            <tspan x="0" y="0">極光三街/二民路路口 </tspan>
+                        </text>
+                        <text id="極光一街_二民路路口_" data-name="極光一街/二民路路口 " transform="translate(1336.969 436.686)"
+                            fill="#7e5757" font-size="23" font-family="NotoSansTC-Light, Noto Sans TC"
+                            font-weight="300">
+                            <tspan x="0" y="0">極光一街/二民路路口 </tspan>
+                        </text>
+                        <text id="終點站_陽光國小" data-name="終點站
+            陽光國小" transform="translate(1557.875 232.452)" fill="#7e5757" font-size="23"
+                            font-family="NotoSansTC-Light, Noto Sans TC" font-weight="300">
+                            <tspan x="0" y="0">終點站</tspan>
+                            <tspan x="0" y="29">陽光國小</tspan>
+                        </text>
+                    </g>
+                </svg>
