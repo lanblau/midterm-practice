@@ -1,0 +1,109 @@
+
+        @media (min-width: 200px) {
+            h1 {
+                font-size: 4rem;
+            }
+
+            .wrap p {
+                font-size: 14px;
+            }
+
+            .maintitle {
+                text-align: center;
+            }
+
+            h2::before {
+                content: '';
+                width: calc(100% + 130px);
+                height: 1px;
+                background: #74CEEB;
+                position: absolute;
+                bottom: 15%;
+                left: 0;
+                z-index: -1;
+            }
+
+            h2 {
+                font-family: 'Source Code Pro', monospace;
+                font-weight: 200;
+                font-size: 1.8rem;
+                color: #929292;
+                margin: 90px 0px 50px 10%;
+                position: relative;
+            }
+
+            .box {
+                margin: 0;
+            }
+
+            .mapImage {
+                width: 350px;
+                min-width: 300px;
+            }
+
+            .pic {
+                width: 250px;
+                height: 100%;
+            }
+
+            h3 {
+                font-size: 1rem;
+            }
+
+            .color {
+                width: 45px;
+                height: 25px;
+                border-radius: 152px 74px 145px 129px;
+            }
+
+            .sec {
+                padding: 20px;
+                margin-left: 20%;
+            }
+
+            .busroute {
+                max-width: 300px;
+                height: 250px;
+                margin-top: 100px;
+            }
+
+            .busimg {
+                width: 30px;
+            }
+
+            .timetablePic {
+                flex-direction: column;
+                margin: 0;
+            }
+
+            .contactinfo {
+                flex-direction: column;
+                margin: 0;
+            }
+
+            .address {
+                margin: 0 auto;
+                width: 350px;
+            }
+        }
+          @media (min-width: 100px) {
+            th {
+                font-size: 1.5rem;
+            }
+
+            .depAritime {
+                font-size: 1rem;
+            }
+
+            td.news {
+                min-width: 180px;
+            }
+
+            td {
+                font-size: 14px;
+            }
+
+            #table2 {
+                margin: 0 15%;
+            }
+        }

@@ -1,0 +1,80 @@
+
+        @media (min-width: 500px) {
+            h1 {
+                font-size: 8rem;
+            }
+
+            .wrap p {
+                font-size: 20px;
+            }
+
+            h2::before {
+                content: '';
+                width: calc(100% + 150px);
+                height: 1px;
+                background: #74CEEB;
+                position: absolute;
+                bottom: 20%;
+                left: 0;
+                z-index: -1;
+            }
+
+            h2 {
+                font-family: 'Source Code Pro', monospace;
+                font-weight: 200;
+                font-size: 3rem;
+                color: #929292;
+                margin: 90px 0px 50px 13%;
+                position: relative;
+            }
+
+            .box {
+                margin: 10px;
+            }
+
+            .mapImage {
+                width: 700px;
+            }
+
+            .pic {
+                width: 300px;
+                height: 100%;
+            }
+
+            h3 {
+                font-size: 2rem;
+            }
+
+            .color {
+                width: 60px;
+                height: 35px;
+            }
+
+            .sec {
+                padding: 0px;
+                margin-left: 0;
+            }
+
+            .busroute {
+                min-width: 500px;
+            }
+
+            .busimg {
+                width: 80px;
+            }
+        }
+        
+           @media (min-width: 500px) {
+            td.news {
+                min-width: 450px;
+            }
+
+            td {
+                font-size: 16px;
+            }
+
+            #table2 {
+                margin: 0;
+            }
+
+        }
