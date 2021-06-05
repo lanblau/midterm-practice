@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="112" height="63.5" viewBox="0 0 112 63.5">
+  <g id="Ellipse_13" data-name="Ellipse 13" transform="translate(63.5) rotate(90)" fill="none" stroke="#74ceeb" stroke-width="3">
+    <circle cx="31.75" cy="31.75" r="31.75" stroke="none"/>
+    <circle cx="31.75" cy="31.75" r="30.25" fill="none"/>
+  </g>
+  <text id="Click_me" data-name="Click me" transform="translate(6 41)" fill="#929292" font-size="22" font-family="SourceCodePro-Light, Source Code Pro" font-weight="300"><tspan x="0" y="0">Click me</tspan></text>
+</svg>
